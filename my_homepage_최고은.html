@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Homepage</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #f4f6fb;
+      color: #20283a;
+      line-height: 1.7;
+    }
+    .hero {
+      min-height: 100vh;
+      padding: 28px 24px 70px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(117,147,255,.25), transparent 28%),
+        linear-gradient(135deg, #17233f, #263d68);
+      color: white;
+    }
+    .nav {
+      max-width: 980px;
+      margin: 0 auto 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: bold; letter-spacing: 2px; color: #fff; }
+    .nav-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav a {
+      color: #e5edff;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      transition: .2s;
+    }
+    .nav a:hover, .nav a:focus {
+      background: #fff;
+      color: #20345b;
+    }
+    .container { width: 100%; max-width: 900px; margin: auto; }
+    .eyebrow { color: #a9c2ff; font-size: 14px; letter-spacing: 3px; font-weight: bold; margin-bottom: 18px; }
+    h1 { font-size: clamp(44px, 9vw, 76px); line-height: 1.12; letter-spacing: -2px; margin-bottom: 16px; }
+    .subtitle { color: #c5d5f5; font-size: clamp(18px, 3vw, 23px); margin-bottom: 30px; }
+    .intro { color: #e1e8f6; max-width: 680px; font-size: 16px; line-height: 1.9; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 11px 19px;
+      font-weight: bold;
+      background: #a9c2ff;
+      color: #17233f;
+      transition: transform .2s, background .2s;
+    }
+    .button:hover, .button:focus { transform: translateY(-2px); background: #fff; }
+    .button.secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.45); }
+    main section.content-section { padding: 78px 24px; }
+    .content-inner { max-width: 900px; margin: auto; }
+    .section-kicker { color: #5574b8; font-size: 13px; letter-spacing: 2px; font-weight: bold; }
+    h2 { font-size: clamp(27px, 5vw, 36px); margin: 8px 0 22px; color: #1d2c49; }
+    .about-box {
+      background: white; border-radius: 18px; padding: 26px;
+      box-shadow: 0 8px 28px rgba(28,45,78,.07);
+    }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .card {
+      background: white; border: 1px solid #e5eaf4; border-radius: 16px;
+      padding: 23px; box-shadow: 0 8px 24px rgba(28,45,78,.05);
+    }
+    .card h3 { color: #4265a8; margin-bottom: 8px; }
+    .card p { color: #59657a; font-size: 14px; }
+    .goal { background: #eaf0ff; border-radius: 18px; padding: 26px; }
+    .goal p { color: #3d4b66; }
+    .back-top { display: inline-block; margin-top: 24px; color: #4265a8; font-weight: bold; text-decoration: none; }
+    footer { text-align: center; color: #7b879b; font-size: 13px; padding: 26px 16px 36px; }
+    @media (max-width: 560px) {
+      .hero { padding: 24px 20px 60px; }
+      .nav { margin-bottom: 58px; }
+      .cards { grid-template-columns: 1fr; }
+      main section.content-section { padding: 58px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="nav" aria-label="메인 메뉴">
+      <a class="brand" href="#home">최고은의 홈페이지</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#goal">My Goal</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <p class="eyebrow">A LITTLE SPACE ABOUT ME</p>
+      <h1>안녕하세요,<br>최고은입니다!</h1>
+      <p class="subtitle">GOEUN CHOI’S HOMEPAGE · Learning and Creating</p>
+      <p class="intro">
+        안녕하세요! 이곳은 새로운 것을 배우고 관심 있는 분야를 탐구하는
+        저만의 작은 공간입니다.<br>
+        소프트웨어와 디지털 기술에 관심이 있으며, 배운 내용을 직접 만들어 보고
+        다양한 아이디어를 표현하는 것을 좋아합니다.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#about">홈페이지 둘러보기</a>
+        <a class="button secondary" href="#interests">관심 분야 보기</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-section" id="about">
+      <div class="content-inner">
+        <p class="section-kicker">01 / ABOUT</p>
+        <h2>About This Page</h2>
+        <div class="about-box">
+          <p>
+            이 홈페이지는 나의 관심사와 배우고 싶은 것들을 소개하기 위해 만든 공간입니다.
+            새로운 기술을 접하고, 작은 결과물이라도 직접 완성해 보는 과정을 중요하게 생각합니다.
+            앞으로 다양한 경험을 통해 나만의 방향을 찾아가고 싶습니다.
+          </p>
+        </div>
+        <a class="back-top" href="#home">↑ 맨 위로</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="interests">
+      <div class="content-inner">
+        <p class="section-kicker">02 / INTERESTS</p>
+        <h2>My Interests</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Programming</h3>
+            <p>코딩의 기초를 배우고 직접 작동하는 프로그램을 만들어 보기</p>
+          </article>
+          <article class="card">
+            <h3>AI & Technology</h3>
+            <p>인공지능과 새로운 디지털 기술의 활용 방법 알아보기</p>
+          </article>
+          <article class="card">
+            <h3>Creative Ideas</h3>
+            <p>떠오른 생각을 글과 이미지, 웹페이지로 표현하기</p>
+          </article>
+          <article class="card">
+            <h3>Everyday Discoveries</h3>
+            <p>일상에서 새로운 관심사를 발견하고 경험 넓히기</p>
+          </article>
+        </div>
+        <a class="back-top" href="#home">↑ 맨 위로</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="goal">
+      <div class="content-inner">
+        <p class="section-kicker">03 / MY GOAL</p>
+        <h2>My Goal</h2>
+        <div class="goal">
+          <p>
+            꾸준히 배우고 직접 시도하면서 문제를 해결하는 능력을 키우는 것이 목표입니다.
+            작은 프로젝트부터 차근차근 완성하며 배운 내용을 나만의 결과물로 만들어 가고 싶습니다.
+          </p>
+        </div>
+        <a class="back-top" href="#home">↑ 맨 위로</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Thank you for visiting my page. · 2026</footer>
+</body>
+</html>
